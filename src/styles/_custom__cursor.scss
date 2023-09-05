@@ -1,0 +1,12 @@
+.custom__cursor {
+    width: 50px;
+    height: 50px;
+    background-image: url(/dist/images/castiel_dean-1.png);
+    background-size: cover;
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    box-shadow: 2px;
+
+    
+}

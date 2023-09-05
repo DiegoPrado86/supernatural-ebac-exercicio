@@ -1,0 +1,76 @@
+@use 'variaveis';
+
+.faq {
+    padding: 5.6vw;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 24px;
+
+        @media(max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    &__questions {
+        &__item {
+            background-color: #111114;
+            margin-bottom: 16px;
+
+            
+
+            
+            &__question {
+                position: relative;
+                color: variaveis.$corTextoSecundaria;
+                font-size: 20px;
+                padding: 24px;
+                display: block;
+                cursor: pointer;
+
+                @media(max-width: 768px) {
+                    font-size: 12px;
+                }
+    
+
+
+                &::after {
+                    position: absolute;
+                    content: '+';
+                    right: 24px;
+                    top: 0;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px;
+                }
+            }
+
+            &__answer {
+                height: 0;
+                overflow: hidden;
+                padding: 0 24px;
+                transition: height, .5s ease;
+
+                p {
+                    @media(max-width: 768px) {
+                        font-size: 7px;
+                    }
+                }
+            }
+
+
+            &--is-open {
+                .faq__questions__item__question::after {
+                    content: '-';
+                }
+
+                .faq__questions__item__answer {
+                    height: auto;
+                    padding-bottom: 24px;
+                    transition: height .5s ease;
+                }
+            }
+        }
+    }
+}

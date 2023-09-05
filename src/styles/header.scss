@@ -1,0 +1,73 @@
+@use 'variaveis';
+
+.header {
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundo;
+
+
+
+    &__container {
+        opacity: 0.9;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        background-size: cover;
+        
+
+        @media(max-width: 768px) {
+            padding: 0 12px 0 20px;
+            font-size: 13px;
+        }
+
+        &__impala {
+            width: 40vw;
+            opacity: 0;
+            transform: scale(1);
+            transition: all 5s ease-in-out;
+            object-fit: cover;
+            border-radius: 60px;
+            max-width: 50%;
+
+            @media (max-width: 768px) {
+                max-width: 54px;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+
+
+        &__item {
+            margin: 5px;
+            list-style: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 10px;
+            transition: 0.2s;
+            transition: 0.5s all ease-in-out;
+            
+
+            a {
+                @media(max-width: 768px) {
+                    font-size: 12px;
+                }
+            }
+
+
+
+            &:hover {
+                background-color: #e20b0b;
+                transform: scale(1.1);
+
+                a {
+                    color: variaveis.$corTextoBotao;
+                }
+            }
+        }
+    }
+
+}

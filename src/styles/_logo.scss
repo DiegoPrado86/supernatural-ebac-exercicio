@@ -1,0 +1,49 @@
+.logo__supernatural {
+    padding: 30.6vw;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/dist/images/supernatural_poster.jpg);  opacity: 0.9;
+    background-size: cover;
+    padding-bottom: 20vw;
+    position: relative;
+    background-position: center;
+    width: 100vw;
+    height: 60vh;
+
+    @media (max-width: 768px) {
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 0;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        background-size: contain; /* Isso fará a imagem se ajustar ao contêiner */
+        background-repeat: no-repeat;
+        margin-top: -100px;
+    }
+    
+
+    &__item {
+        width: 40vw;
+        opacity: 0;
+        transform: scale(1);
+        transition: all 5s ease-in-out;
+        object-fit: cover;
+
+
+        @media (max-width: 768px) {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 32%;
+            left: 30%;
+            right: 50%;
+        }
+    }
+}
