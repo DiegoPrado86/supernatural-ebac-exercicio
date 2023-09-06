@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const arrayTexto = elemento.innerHTML.split('');
         elemento.innerHTML = '';
         arrayTexto.forEach((Letra, i)=>{
-            setTimeout(()=>{
+            setTimeout(()=> {
                 elemento.innerHTML += Letra;
             }, 75 * i)
         });
